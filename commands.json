@@ -36,7 +36,7 @@
       "description": "撤回文件 (che hui) → git checkout -- <file>",
       "category": "文件操作"
     },
-    "fz": {
+    "ckfz": {
       "args": [
         "branch"
       ],

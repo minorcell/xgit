@@ -5,7 +5,6 @@ xgit 不是 Git 的创新，而是基于 git 的扩展。使用中文拼音首�
 ## ✨ 特性
 
 - **中文友好** - 使用拼音首字母，如 `kl`(克隆)、`tj`(提交)、`ts`(推送)
-- **输入高效** - 2 个字母通常比原 git 命令更短
 - **完全兼容** - 支持原生 git 命令，无学习负担
 - **复合命令** - `kstj`一键完成 add + commit + push
 
@@ -134,21 +133,6 @@ xgit status
 xgit log --oneline
 ```
 
-## 🧪 开发和测试
-
-### 运行测试
-
-```bash
-# 运行所有测试
-make test
-
-# 运行基准测试
-go test -bench=. -benchmem
-
-# 开发模式测试
-make dev
-```
-
 ### 项目结构
 
 ```
@@ -162,12 +146,6 @@ xgit/
 ├── *_test.go           # 测试文件 (4个)
 └── docs/               # 设计文档
 ```
-
-### 性能指标
-
-- 命令查找: ~26ns, 0 内存分配
-- 31 个命令（29 个基本+2 个复合），100%测试覆盖
-- 987 行测试代码
 
 ## 💡 设计理念
 
@@ -253,31 +231,6 @@ xgit ycck
 xgit ycxq origin
 ```
 
-## 🤝 贡献
-
-欢迎提交 Issue 和 Pull Request！
-
-### 开发环境
-
-```bash
-# 克隆仓库
-git clone <repo-url>
-cd xgit
-
-# 构建
-make build
-
-# 运行测试
-make test
-
-# 开发模式
-make dev
-```
-
 ## 📄 许可证
 
 [MIT License](LICENSE)
-
----
-
-**让 Git 更中文，让开发更高效！** 🚀
