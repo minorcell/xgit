@@ -93,6 +93,9 @@ func showUsageExamples(command string) {
 	case "kstj":
 		fmt.Println("用法示例:")
 		fmt.Println("  xgit kstj \"快速提交信息\"")
+	case "ycsh":
+		fmt.Println("用法示例:")
+		fmt.Println("  xgit ycsh https://github.com/user/repo.git")
 	case "cjfz":
 		fmt.Println("用法示例:")
 		fmt.Println("  xgit cjfz feature-branch")
@@ -120,5 +123,26 @@ func showUsageExamples(command string) {
 		fmt.Println("用法示例:")
 		fmt.Println("  xgit ht HEAD~1")
 		fmt.Println("  xgit ht --hard HEAD~2")
+	case "ycck":
+		fmt.Println("用法示例:")
+		fmt.Println("  xgit ycck")
+	case "yctz":
+		fmt.Println("用法示例:")
+		fmt.Println("  xgit yctz origin https://github.com/user/repo.git")
+		fmt.Println("  xgit yctz upstream https://github.com/original/repo.git")
+	case "ycsc":
+		fmt.Println("用法示例:")
+		fmt.Println("  xgit ycsc origin")
+		fmt.Println("  xgit ycsc upstream")
+	case "yczm":
+		fmt.Println("用法示例:")
+		fmt.Println("  xgit yczm origin new-origin")
+	case "ycxg":
+		fmt.Println("用法示例:")
+		fmt.Println("  xgit ycxg origin https://github.com/user/new-repo.git")
+	case "ycxq":
+		fmt.Println("用法示例:")
+		fmt.Println("  xgit ycxq origin")
+		fmt.Println("  xgit ycxq upstream")
 	}
 }

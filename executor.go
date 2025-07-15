@@ -40,6 +40,8 @@ func executeCompositeCommand(cmdName string, commands [][]string, args []string)
 	switch cmdName {
 	case "kstj": // 快速提交
 		executeQuickCommit(args)
+	case "ycsh": // 远程设置
+		executeRemoteSetup(args)
 	default:
 		fmt.Printf("未实现的复合命令: %s\n", cmdName)
 	}
@@ -77,6 +79,38 @@ func executeQuickCommit(args []string) {
 	}
 
 	fmt.Println("✅ 快速提交完成！")
+}
+
+// 执行远程设置
+func executeRemoteSetup(args []string) {
+	if len(args) == 0 {
+		fmt.Println("错误: 需要提供远程仓库URL")
+		fmt.Println("用法: xgit ycsh <远程仓库URL>")
+		return
+	}
+
+	url := args[0]
+
+	// 1. git remote add origin <url>
+	fmt.Printf("→ 添加远程仓库: %s\n", url)
+	if err := executeGitCommandWithError([]string{"remote", "add", "origin", url}); err != nil {
+		fmt.Printf("添加远程仓库失败: %v\n", err)
+		return
+	}
+
+	// 2. git push -u origin main (或当前分支)
+	fmt.Println("→ 推送并设置上游分支...")
+	branch := "main" // 默认使用main分支
+	if len(args) > 1 {
+		branch = args[1] // 如果提供了分支名，使用指定分支
+	}
+
+	if err := executeGitCommandWithError([]string{"push", "-u", "origin", branch}); err != nil {
+		fmt.Printf("推送失败: %v\n", err)
+		return
+	}
+
+	fmt.Println("✅ 远程设置完成！")
 }
 
 // 执行git命令
