@@ -1,0 +1,269 @@
+{
+  "commands": {
+    "kl": {
+      "args": [
+        "clone"
+      ],
+      "description": "克隆仓库 (ke long) → git clone <url>",
+      "category": "仓库操作"
+    },
+    "csh": {
+      "args": [
+        "init"
+      ],
+      "description": "初始化仓库 (chu shi hua) → git init",
+      "category": "仓库操作"
+    },
+    "tja": {
+      "args": [
+        "add"
+      ],
+      "description": "添加文件 (tian jia) → git add <file>",
+      "category": "文件操作"
+    },
+    "tj": {
+      "args": [
+        "commit"
+      ],
+      "description": "提交更改 (ti jiao) → git commit -m <message>",
+      "category": "文件操作"
+    },
+    "ch": {
+      "args": [
+        "checkout",
+        "--"
+      ],
+      "description": "撤回文件 (che hui) → git checkout -- <file>",
+      "category": "文件操作"
+    },
+    "fz": {
+      "args": [
+        "branch"
+      ],
+      "description": "查看分支 (fen zhi) → git branch",
+      "category": "分支操作"
+    },
+    "fzxq": {
+      "args": [
+        "branch",
+        "-v"
+      ],
+      "description": "分支详情 (fen zhi xiang qing) → git branch -v",
+      "category": "分支操作"
+    },
+    "ycfz": {
+      "args": [
+        "branch",
+        "-r"
+      ],
+      "description": "远程分支 (yuan cheng fen zhi) → git branch -r",
+      "category": "分支操作"
+    },
+    "cjfz": {
+      "args": [
+        "checkout",
+        "-b"
+      ],
+      "description": "创建分支 (chuang jian fen zhi) → git checkout -b <branch>",
+      "category": "分支操作"
+    },
+    "qhfz": {
+      "args": [
+        "checkout"
+      ],
+      "description": "切换分支 (qie huan fen zhi) → git checkout <branch>",
+      "category": "分支操作"
+    },
+    "ts": {
+      "args": [
+        "push"
+      ],
+      "description": "推送代码 (tui song) → git push",
+      "category": "远程操作"
+    },
+    "lq": {
+      "args": [
+        "pull"
+      ],
+      "description": "拉取代码 (la qu) → git pull",
+      "category": "远程操作"
+    },
+    "hq": {
+      "args": [
+        "fetch"
+      ],
+      "description": "获取更新 (huo qu) → git fetch",
+      "category": "远程操作"
+    },
+    "ckyc": {
+      "args": [
+        "remote",
+        "-v"
+      ],
+      "description": "查看远程仓库 (cha kan yuan cheng) → git remote -v",
+      "category": "远程操作"
+    },
+    "tyc": {
+      "args": [
+        "remote",
+        "add"
+      ],
+      "description": "添加远程仓库 (tian jia yuan cheng) → git remote add <n> <url>",
+      "category": "远程操作"
+    },
+    "scyc": {
+      "args": [
+        "remote",
+        "remove"
+      ],
+      "description": "删除远程仓库 (shan chu yuan cheng) → git remote remove <n>",
+      "category": "远程操作"
+    },
+    "cmmyc": {
+      "args": [
+        "remote",
+        "rename"
+      ],
+      "description": "重命名远程仓库 (chong ming ming yuan cheng) → git remote rename <old> <new>",
+      "category": "远程操作"
+    },
+    "xgyc": {
+      "args": [
+        "remote",
+        "set-url"
+      ],
+      "description": "修改远程URL (xiu gai yuan cheng) → git remote set-url <n> <url>",
+      "category": "远程操作"
+    },
+    "hb": {
+      "args": [
+        "merge"
+      ],
+      "description": "合并分支 (he bing) → git merge <branch>",
+      "category": "高级操作"
+    },
+    "zf": {
+      "args": [
+        "rebase"
+      ],
+      "description": "整合分支 (zheng he) → git rebase <branch>",
+      "category": "高级操作"
+    },
+    "ht": {
+      "args": [
+        "reset"
+      ],
+      "description": "回退版本 (hui tui) → git reset",
+      "category": "高级操作"
+    },
+    "rz": {
+      "args": [
+        "log"
+      ],
+      "description": "查看日志 (ri zhi) → git log",
+      "category": "日志操作"
+    },
+    "yhrz": {
+      "args": [
+        "log",
+        "--oneline"
+      ],
+      "description": "一行日志 (yi hang ri zhi) → git log --oneline",
+      "category": "日志操作"
+    },
+    "zt": {
+      "args": [
+        "status"
+      ],
+      "description": "状态 (zhuang tai) → git status",
+      "category": "状态操作"
+    },
+    "ztxq": {
+      "args": [
+        "status",
+        "-s"
+      ],
+      "description": "状态详情 (zhuang tai xiang qing) → git status -s",
+      "category": "状态操作"
+    },
+    "bq": {
+      "args": [
+        "tag"
+      ],
+      "description": "标签列表 (biao qian) → git tag",
+      "category": "标签操作"
+    },
+    "cjbq": {
+      "args": [
+        "tag",
+        "-a"
+      ],
+      "description": "创建标签 (chuang jian biao qian) → git tag -a <tag> -m <message>",
+      "category": "标签操作"
+    },
+    "bqxq": {
+      "args": [
+        "tag",
+        "-l"
+      ],
+      "description": "标签详情 (biao qian xiang qing) → git tag -l",
+      "category": "标签操作"
+    }
+  },
+  "composite_commands": {
+    "kstj": {
+      "steps": [
+        [
+          "add",
+          "."
+        ],
+        [
+          "commit",
+          "-m"
+        ],
+        [
+          "push"
+        ]
+      ],
+      "description": "快速提交 (kuai su ti jiao) → git add . && git commit -m && git push",
+      "category": "复合命令"
+    },
+    "ycsh": {
+      "steps": [
+        [
+          "remote",
+          "add",
+          "origin"
+        ],
+        [
+          "push",
+          "-u",
+          "origin",
+          "main"
+        ]
+      ],
+      "description": "远程设置 (yuan cheng she zhi) → git remote add origin <url> && git push -u origin main",
+      "category": "复合命令"
+    }
+  },
+  "git_commands": [
+    "add",
+    "commit",
+    "push",
+    "pull",
+    "clone",
+    "init",
+    "status",
+    "branch",
+    "checkout",
+    "merge",
+    "rebase",
+    "reset",
+    "log",
+    "fetch",
+    "remote",
+    "tag",
+    "diff",
+    "stash"
+  ]
+}
